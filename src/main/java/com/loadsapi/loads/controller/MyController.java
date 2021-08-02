@@ -24,16 +24,20 @@ public class MyController {
     @Autowired
     private LoadServiceImpl loadServiceImpl;
 
+    //method to get full list if loads
     @GetMapping("/load")
     public List<Payload> getloads(){
         return this.loadServiceImpl.getloads();
     }
 
+    //method to get ksinglelist of nodes
     @GetMapping("/load/{loadId}")
     public Payload getload(@PathVariable String loadId){
         return this.loadServiceImpl.getloads(loadId);
     }
 
+
+    //method to add new payload
     @PostMapping("/load")
     public ResponseEntity<String> addloads(@RequestBody Payload p){
         try {
@@ -45,6 +49,7 @@ public class MyController {
         }
     }
 
+    //method to change a payload
     @PutMapping("/load")
     public ResponseEntity<String> changeloads(@RequestBody Payload p){
         try {
@@ -57,6 +62,8 @@ public class MyController {
 
     }
     
+
+    // method to delete a payload
     @DeleteMapping("/load/{loadId}")
     public ResponseEntity<String> deleteLoads(@PathVariable String loadId) {
         try {

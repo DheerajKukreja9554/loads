@@ -10,9 +10,13 @@ import com.loadsapi.loads.loadsdao.LoadsDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+// service class
 @Service
 public class LoadServiceImpl implements LoadServices{
     
+
+    // initializding dao layer and autowiring it
     @Autowired
     private LoadsDao payloads;
 

@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+//entity class whic is alse name of table 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Payload {
@@ -23,9 +24,12 @@ public class Payload {
     private String comment;
     private Date date;
 
+    // default constructer
     public Payload(){
         
     }
+
+    // Constructer
     public Payload(String shipperId, String loadingPoint, String unloadingPoint, String productType, String truckType,
             String noOfTrucks, String weight, String comment, Date date) {
         this.shipperId = shipperId;

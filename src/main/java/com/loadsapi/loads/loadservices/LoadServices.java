@@ -4,8 +4,7 @@ import java.util.List;
 
 import com.loadsapi.loads.entitity.Payload;
 
-// import org.hibernate.mapping.List;
-
+// interface for services
 public interface LoadServices {
 
     public List<Payload> getloads();
